@@ -1,4 +1,3 @@
-import { deepStrictEqual } from 'assert';
 import fs from 'fs';
 import path from 'path';
 
@@ -41,4 +40,5 @@ import path from 'path';
 // console.log(status);
 // console.log(status.isFile());
 // console.log(status.isDirectory());
+
 
