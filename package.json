@@ -1,0 +1,17 @@
+{
+  "name": "node-course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Caio Xavier Cabral <caxcabral@pm.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.8",
+    "@babel/preset-env": "^7.13.10"
+  },
+  "scripts": {
+    "sync-methods": "babel-node ./src/fs-examples/sync-methods.js"
+  }
+}
