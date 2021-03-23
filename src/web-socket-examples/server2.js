@@ -1,21 +1,22 @@
 import { io } from 'socket.io-client';
+import { colorfulLog } from "colorful-log-cx";
 
 const socket = io('http://localhost:8000');
 
 const createSocketClient = (name, interval) => {
     socket.on('connect', () => {
     
-        console.log(`${name} connected!`);
+        colorfulLog(`${name} connected!`);
     
         setInterval(() => {
             socket.emit('message', `Hello from ${name}`);
         }, interval)
     });
     
-    socket.on('disconnect', () => console.log(`${name} disconnected.`));    
-    socket.on('someOtherEvent', (msg) => console.log(msg));
+    socket.on('disconnect', () => colorfulLog(`${name} disconnected.`));    
+    socket.on('someOtherEvent', (msg) => colorfulLog(msg));
 
 }
 
-createSocketClient('Cliente server 1', 2000);
+createSocketClient('Client server 1', 2000);
 createSocketClient('Client server 2', 5000)
